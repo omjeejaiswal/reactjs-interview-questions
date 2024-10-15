@@ -916,15 +916,14 @@ Benefits:
 Works the same in all browsers.
 Easier to use because React takes care of the differences between browsers.
 
-```js
-const handleClick = (event) => {
-  console.log("Button clicked!", event);  // This 'event' is a synthetic event.
-};
-
-return <button onClick={handleClick}>Click me</button>;
-
-```
-
+  ```  
+  const handleClick = (event) => {
+    console.log("Button clicked!", event);  // This 'event' is a synthetic event.
+  };
+  
+  return <button onClick={handleClick}>Click me</button>;
+  ```
+k
     **[⬆ Back to Top](#table-of-contents)**
 
 16. ### What are inline conditional expressions?
