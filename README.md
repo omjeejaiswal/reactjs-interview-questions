@@ -2873,6 +2873,53 @@ k
 
      ![flux](images/flux.png)
 
+     Flux is a design pattern introduced by Facebook for managing the flow of data in a React application. It provides a structured approach to handling state and enforcing unidirectional data flow, making it easier to reason about and debug large, complex applications.
+
+  Key Concepts of Flux:
+  Unidirectional Data Flow: Flux enforces a single direction for data flow, which helps maintain consistency and predictability in how state changes propagate through an application. Data flows in one direction, preventing unpredictable updates or cascading changes.
+  
+  Components of Flux: Flux architecture typically consists of the following parts:
+  
+  Actions: These are simple objects or payloads that carry information from the UI (or other sources) to the Dispatcher. Actions are triggered by user interactions or system events (like API responses).
+  
+  Dispatcher: This is the central hub that manages the flow of data. It receives actions and forwards them to the appropriate stores. The dispatcher ensures that every store knows about every action, keeping the application state in sync.
+  
+  Stores: Stores are responsible for holding the application’s state and business logic. Unlike the model in MVC, stores do not represent a single type of object but instead hold the state for a particular domain of the application. When they receive an action from the dispatcher, they update themselves accordingly.
+  
+  View: In a Flux application, the view is a React component (or a tree of components) that renders the application UI based on the state in the stores. Views can dispatch actions in response to user interactions.
+  
+  Data Flow in Flux:
+  
+  The View dispatches an Action based on user interaction or other events.
+  The Action is passed to the Dispatcher.
+  The Dispatcher forwards the action to all relevant Stores.
+  The Stores update their state based on the action.
+  The View is re-rendered in response to the updated state.
+
+  
+
+
+     
+
+**[⬆ Back to Top](#table-of-contents)**
+
+102.1 ### Why Flux?
+
+  _Predictable State Management_: Because of the unidirectional data flow, Flux ensures that the state management is predictable, making debugging easier.
+  _Decoupling Views and Data_: By having stores separate from views, business logic and state are abstracted, leading to better separation of concerns.
+  _Scalability_: In large applications, Flux provides structure by giving a clear data flow. As applications grow, Flux can scale better than alternatives like two-way data binding.
+
+  **[⬆ Back to Top](#table-of-contents)**
+
+
+102.2 Difference Between Flux and Redux?
+
+  Redux is inspired by Flux but improves upon it by simplifying the architecture:
+
+  _Single Store_: While Flux can have multiple stores, Redux uses a single store for the entire application.
+  _Pure Functions_: Redux reducers (functions that update the store) are pure functions, meaning they don’t have side effects and are predictable.
+  _Middlewares_: Redux comes with middleware like redux-thunk or redux-saga to handle asynchronous actions, making it more versatile.
+
 **[⬆ Back to Top](#table-of-contents)**
 
 103. ### What is Redux?
