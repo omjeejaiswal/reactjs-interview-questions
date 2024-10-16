@@ -2906,7 +2906,9 @@ k
 102.1 ### Why Flux?
 
   _Predictable State Management_: Because of the unidirectional data flow, Flux ensures that the state management is predictable, making debugging easier.
+  
   _Decoupling Views and Data_: By having stores separate from views, business logic and state are abstracted, leading to better separation of concerns.
+  
   _Scalability_: In large applications, Flux provides structure by giving a clear data flow. As applications grow, Flux can scale better than alternatives like two-way data binding.
 
   **[⬆ Back to Top](#table-of-contents)**
